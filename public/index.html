@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Khurram's LAN Messenger</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <!-- Header Section -->
+  <header>
+    <span id="profileName"></span> <!-- Username will be dynamically inserted here -->
+    Khurram's LAN Messenger
+  </header>
+
+  <!-- Username Input Screen -->
+  <div id="usernameInputScreen">
+    <input type="text" id="username" placeholder="Enter your username">
+    <button id="joinBtn">Join Chat</button>
+  </div>
+
+  <!-- Chat Screen -->
+  <div id="chatScreen" style="display: none;">
+    <!-- Users Panel -->
+    <aside id="usersPanel">
+      <h3>Available Users</h3>
+      <ul id="userList"></ul>
+    </aside>
+
+    <!-- Chat Container -->
+    <div id="chatContainer">
+      <nav>
+        <button onclick="openTab('commonMessages')">Common Room</button>
+        <button onclick="openTab('privateMessages')">Private Chat</button>
+      </nav>
+
+      <!-- Tab Content for Common and Private Chat -->
+      <div id="commonMessages" class="tab-content"></div>
+      <div id="privateMessages" class="tab-content" style="display: none;"></div>
+
+      <!-- Message Input Area -->
+      <div id="messageInputContainer">
+        <input type="text" id="messageInput" placeholder="Type a message">
+        <button id="sendBtn">Send</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Notification Container for message pop-ups -->
+  <div id="notificationContainer"></div>
+
+  <!-- Footer Section -->
+  <footer>© 2024 Khurram's LAN Messenger - Built for Local Network Communication</footer>
+
+  <!-- Link to app.js for functionality -->
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="/app.js"></script>
+</body>
+</html>

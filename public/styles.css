@@ -1,0 +1,236 @@
+/* General styling */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f4f1f1;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  color: #333;
+}
+
+/* Header styling */
+header {
+  background-color: #2E7D32;
+  color: #ffffff;
+  padding: 10px;
+  text-align: center;
+  font-size: 1.8em;
+  font-weight: bold;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  position: relative;
+}
+
+/* Profile name styling (top-left) */
+#profileName {
+  position: absolute;
+  top: 10px;
+  left: 15px;
+  font-size: 1em;
+  font-weight: bold;
+  font-style: italic;
+  font-family: 'Georgia', 'Garamond', serif;
+  color: #ffffff;
+  background-color: #2E7D32;
+  padding: 5px 10px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Username input screen */
+#usernameInputScreen {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+#username {
+  padding: 12px;
+  margin: 15px;
+  font-size: 1.1em;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+#joinBtn {
+  padding: 12px 25px;
+  background-color: #2E7D32;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+#joinBtn:hover {
+  background-color: #1a5b21;
+}
+
+/* Notification styling (top-right) */
+#notificationContainer {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  max-width: 300px;
+  z-index: 1000;
+}
+
+.notification {
+  background: linear-gradient(135deg, #2E7D32, #66BB6A);
+  color: #ffffff;
+  padding: 15px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  font-size: 0.9em;
+  font-family: 'Verdana', sans-serif;
+  opacity: 0;
+  transform: translateY(-10px);
+  animation: slideIn 0.5s forwards, fadeOut 4s forwards 3s;
+}
+
+/* Notification animation */
+@keyframes slideIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeOut {
+  to {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+}
+
+/* Chat screen layout */
+#chatScreen {
+  display: flex;
+  flex-grow: 1;
+  overflow: hidden;
+}
+
+/* Users panel styling */
+#usersPanel {
+  background-color: #CAEB75;
+  width: 200px;
+  padding: 10px;
+  overflow-y: auto;
+  border-right: 1px solid #ddd;
+}
+
+#usersPanel h3 {
+  color: #2E7D32;
+  margin-top: 0;
+}
+
+#userList {
+  list-style-type: none;
+  padding: 0;
+}
+
+#userList li {
+  background-color: #ffffff;
+  margin: 5px 0;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+#userList li:hover {
+  background-color: #2E7D32;
+  color: #ffffff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Chat container styling */
+#chatContainer {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffff;
+  border-radius: 8px;
+  margin: 10px;
+}
+
+nav {
+  display: flex;
+  justify-content: space-around;
+  background-color: #CAEB75;
+  padding: 5px;
+}
+
+nav button {
+  background-color: #CAEB75;
+  color: #000000;
+  border: none;
+  padding: 10px 20px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+  border-radius: 5px;
+}
+
+nav button:hover {
+  background-color: #2E7D32;
+  color: #ffffff;
+}
+
+/* Messages display area */
+.tab-content {
+  flex-grow: 1;
+  padding: 15px;
+  overflow-y: auto;
+  max-height: calc(100vh - 300px);
+  background-color: #fafafa;
+  border-radius: 8px;
+}
+
+/* Message input area */
+#messageInputContainer {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border-top: 1px solid #ddd;
+  background-color: #f4f4f4;
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+}
+
+#messageInput {
+  flex-grow: 1;
+  padding: 12px;
+  margin-right: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+#sendBtn {
+  padding: 12px 20px;
+  background-color: #2E7D32;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+#sendBtn:hover {
+  background-color: #1a5b21;
+}
+
+/* Footer styling */
+footer {
+  background-color: #2E7D32;
+  color: #ffffff;
+  text-align: center;
+  padding: 10px;
+  font-size: 0.9em;
+  box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.2);
+}
