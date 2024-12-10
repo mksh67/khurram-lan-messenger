@@ -1,17 +1,26 @@
 {
   "name": "khurram-lan-messenger",
   "version": "1.0.0",
-  "description": "",
+  "description": "Khurram's LAN Messenger for local network communication.",
   "main": "server.js",
   "scripts": {
-    "start": "nodemon server.js"
+    "start": "node server.js",
+    "dev": "nodemon server.js"
   },
-  "keywords": [],
+  "keywords": [
+    "LAN",
+    "Messenger",
+    "Chat",
+    "Socket.IO",
+    "Express"
+  ],
   "author": "",
   "license": "ISC",
   "dependencies": {
     "express": "^4.21.1",
-    "nodemon": "^3.1.7",
     "socket.io": "^4.8.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.7"
   }
 }
